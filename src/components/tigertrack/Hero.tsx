@@ -166,7 +166,7 @@ export function Hero() {
             style={shift(22)}
           >
             <div className={reduced ? "size-full" : "size-full animate-prowl"}>
-              <div className={reduced ? "size-full" : "size-full animate-gait"}>
+              <div className={`relative size-full ${reduced ? "" : "animate-gait"}`}>
                 <img
                   src={tiger}
                   alt="Bengal tiger walking slowly through low forest light at night"
@@ -174,17 +174,17 @@ export function Hero() {
                   height={1280}
                   className="size-full origin-bottom object-contain tiger-mask animate-breathe drop-shadow-[0_30px_60px_oklch(0.05_0.02_155/0.8)]"
                 />
+                {!reduced && (
+                  <motion.span
+                    aria-hidden="true"
+                    className="absolute top-[46%] left-1/2 h-[3%] w-[26%] -translate-x-1/2 rounded-full bg-[oklch(0.16_0.012_150)]"
+                    animate={{ scaleY: [0, 0, 1, 0, 0] }}
+                    transition={{ duration: 6.5, repeat: Infinity, times: [0, 0.82, 0.86, 0.9, 1] }}
+                    style={{ transformOrigin: "center" }}
+                  />
+                )}
               </div>
             </div>
-            {!reduced && (
-              <motion.span
-                aria-hidden="true"
-                className="absolute top-[46%] left-1/2 h-[3%] w-[26%] -translate-x-1/2 rounded-full bg-[oklch(0.16_0.012_150)]"
-                animate={{ scaleY: [0, 0, 1, 0, 0] }}
-                transition={{ duration: 6.5, repeat: Infinity, times: [0, 0.82, 0.86, 0.9, 1] }}
-                style={{ transformOrigin: "center" }}
-              />
-            )}
           </div>
 
           {/* floating data cards */}
