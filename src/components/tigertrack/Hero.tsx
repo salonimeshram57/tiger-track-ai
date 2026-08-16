@@ -107,13 +107,13 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-foreground/80">
-            AI-powered intelligence for understanding individual tiger movement, territory
-            and behaviour.
+            Field teams in Pench collect more images than anyone can look through. We read
+            the stripes, so the forest staff can read the story.
           </p>
 
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            From thousands of camera-trap images to actionable wildlife intelligence —
-            automatically detect, identify, map and monitor every individual tiger.
+            Blank frames get set aside, each tiger gets recognised by its own stripe
+            pattern, and movement across the reserve is mapped week after week.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
