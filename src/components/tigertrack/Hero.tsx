@@ -165,13 +165,17 @@ export function Hero() {
             className="relative size-full transition-transform duration-300 ease-out"
             style={shift(22)}
           >
-            <img
-              src={tiger}
-              alt="Realistic Bengal tiger observing the viewer in low forest light"
-              width={1280}
-              height={1280}
-              className="size-full origin-bottom object-contain tiger-mask animate-breathe drop-shadow-[0_30px_60px_oklch(0.05_0.02_155/0.8)]"
-            />
+            <div className={reduced ? "size-full" : "size-full animate-prowl"}>
+              <div className={reduced ? "size-full" : "size-full animate-gait"}>
+                <img
+                  src={tiger}
+                  alt="Bengal tiger walking slowly through low forest light at night"
+                  width={1280}
+                  height={1280}
+                  className="size-full origin-bottom object-contain tiger-mask animate-breathe drop-shadow-[0_30px_60px_oklch(0.05_0.02_155/0.8)]"
+                />
+              </div>
+            </div>
             {!reduced && (
               <motion.span
                 aria-hidden="true"

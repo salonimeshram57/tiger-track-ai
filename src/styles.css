@@ -239,6 +239,50 @@
   animation: tt-breathe 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
+/* slow, confident prowl — a long left-to-right saunter with weight shift */
+@keyframes tt-prowl {
+  0% {
+    transform: translate3d(-4%, 0, 0) scale(0.985);
+  }
+  25% {
+    transform: translate3d(-1.5%, -0.5%, 0) scale(0.995);
+  }
+  50% {
+    transform: translate3d(1.5%, 0.3%, 0) scale(1.005);
+  }
+  75% {
+    transform: translate3d(3.5%, -0.4%, 0) scale(0.998);
+  }
+  100% {
+    transform: translate3d(-4%, 0, 0) scale(0.985);
+  }
+}
+
+/* subtle shoulder roll / paw-step cadence */
+@keyframes tt-gait {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.4deg);
+  }
+  25% {
+    transform: translateY(-0.5%) rotate(0.15deg);
+  }
+  50% {
+    transform: translateY(0.35%) rotate(0.45deg);
+  }
+  75% {
+    transform: translateY(-0.4%) rotate(0.1deg);
+  }
+}
+
+@utility animate-prowl {
+  animation: tt-prowl 34s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+@utility animate-gait {
+  animation: tt-gait 4.6s ease-in-out infinite;
+}
+
 @utility animate-drift {
   animation: tt-drift 9s ease-in-out infinite;
 }
