@@ -247,6 +247,14 @@
   animation: tt-pulse-ring 2.8s ease-out infinite;
 }
 
+@utility tiger-mask {
+  mask-image: radial-gradient(
+    68% 62% at 50% 42%,
+    oklch(0 0 0) 55%,
+    transparent 100%
+  );
+}
+
 @utility btn-amber {
   background-image: var(--gradient-amber);
   color: var(--primary-foreground);

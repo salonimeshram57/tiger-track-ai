@@ -170,7 +170,7 @@ export function Hero() {
               alt="Realistic Bengal tiger observing the viewer in low forest light"
               width={1280}
               height={1280}
-              className="size-full origin-bottom object-contain animate-breathe drop-shadow-[0_30px_60px_oklch(0.05_0.02_155/0.8)]"
+              className="size-full origin-bottom object-contain tiger-mask animate-breathe drop-shadow-[0_30px_60px_oklch(0.05_0.02_155/0.8)]"
             />
             {!reduced && (
               <motion.span
