@@ -107,13 +107,13 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-foreground/80">
-            AI-powered intelligence for understanding individual tiger movement, territory
-            and behaviour.
+            Field teams in Pench collect more images than anyone can look through. We read
+            the stripes, so the forest staff can read the story.
           </p>
 
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            From thousands of camera-trap images to actionable wildlife intelligence —
-            automatically detect, identify, map and monitor every individual tiger.
+            Blank frames get set aside, each tiger gets recognised by its own stripe
+            pattern, and movement across the reserve is mapped week after week.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -165,22 +165,26 @@ export function Hero() {
             className="relative size-full transition-transform duration-300 ease-out"
             style={shift(22)}
           >
-            <img
-              src={tiger}
-              alt="Realistic Bengal tiger observing the viewer in low forest light"
-              width={1280}
-              height={1280}
-              className="size-full origin-bottom object-contain tiger-mask animate-breathe drop-shadow-[0_30px_60px_oklch(0.05_0.02_155/0.8)]"
-            />
-            {!reduced && (
-              <motion.span
-                aria-hidden="true"
-                className="absolute top-[46%] left-1/2 h-[3%] w-[26%] -translate-x-1/2 rounded-full bg-[oklch(0.16_0.012_150)]"
-                animate={{ scaleY: [0, 0, 1, 0, 0] }}
-                transition={{ duration: 6.5, repeat: Infinity, times: [0, 0.82, 0.86, 0.9, 1] }}
-                style={{ transformOrigin: "center" }}
-              />
-            )}
+            <div className={reduced ? "size-full" : "size-full animate-prowl"}>
+              <div className={`relative size-full ${reduced ? "" : "animate-gait"}`}>
+                <img
+                  src={tiger}
+                  alt="Bengal tiger walking slowly through low forest light at night"
+                  width={1280}
+                  height={1280}
+                  className="size-full origin-bottom object-contain tiger-mask animate-breathe drop-shadow-[0_30px_60px_oklch(0.05_0.02_155/0.8)]"
+                />
+                {!reduced && (
+                  <motion.span
+                    aria-hidden="true"
+                    className="absolute top-[46%] left-1/2 h-[3%] w-[26%] -translate-x-1/2 rounded-full bg-[oklch(0.16_0.012_150)]"
+                    animate={{ scaleY: [0, 0, 1, 0, 0] }}
+                    transition={{ duration: 6.5, repeat: Infinity, times: [0, 0.82, 0.86, 0.9, 1] }}
+                    style={{ transformOrigin: "center" }}
+                  />
+                )}
+              </div>
+            </div>
           </div>
 
           {/* floating data cards */}
