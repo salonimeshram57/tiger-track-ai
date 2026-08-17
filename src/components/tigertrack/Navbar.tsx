@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { Menu, X, ArrowRight, Radar } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#home" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Intelligence", href: "#intelligence" },
+  { label: "How It Works", href: "#pipeline" },
+  { label: "Method", href: "#how-it-works" },
   { label: "Wildlife Map", href: "#map" },
-  { label: "Dashboard", href: "#alerts" },
+  { label: "Alerts", href: "#alerts" },
 ];
 
 export function Navbar() {
@@ -62,12 +63,18 @@ export function Navbar() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
-          <a
-            href="#intelligence"
+          <Link
+            to="/login"
+            className="hidden rounded-sm border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary sm:inline-flex"
+          >
+            Login
+          </Link>
+          <Link
+            to="/signup"
             className="hidden items-center gap-2 rounded-sm border border-primary/40 bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-all hover:bg-primary/20 sm:inline-flex"
           >
-            Launch Dashboard <ArrowRight className="size-4" />
-          </a>
+            Sign Up <ArrowRight className="size-4" />
+          </Link>
           <button
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
@@ -96,13 +103,20 @@ export function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="#intelligence"
+            <Link
+              to="/login"
+              onClick={() => setOpen(false)}
+              className="mt-1 block rounded-sm border border-border px-4 py-3 text-sm font-medium text-foreground"
+            >
+              Login
+            </Link>
+            <Link
+              to="/signup"
               onClick={() => setOpen(false)}
               className="mt-1 flex items-center justify-between rounded-sm bg-primary/15 px-4 py-3 text-sm font-medium text-primary"
             >
-              Launch Dashboard <ArrowRight className="size-4" />
-            </a>
+              Sign Up <ArrowRight className="size-4" />
+            </Link>
           </motion.nav>
         )}
       </AnimatePresence>

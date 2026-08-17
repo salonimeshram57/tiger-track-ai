@@ -97,12 +97,7 @@ export function Hero() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="max-w-2xl"
         >
-          <span className="eyebrow inline-flex items-center gap-2 rounded-sm border border-border px-3 py-1.5">
-            <span className="size-1.5 rounded-full bg-signal" />
-            Camera-Trap Intelligence · Pench
-          </span>
-
-          <h1 className="mt-7 text-[clamp(2.6rem,7vw,5rem)] leading-[0.95] font-semibold text-balance">
+          <h1 className="text-[clamp(2.6rem,7vw,5rem)] leading-[0.95] font-semibold text-balance">
             Every Stripe <span className="text-amber-gradient">Tells a Story.</span>
           </h1>
 
@@ -118,12 +113,13 @@ export function Hero() {
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a
-              href="#intelligence"
+              href="#map"
               className="group inline-flex items-center gap-2 rounded-sm btn-amber px-6 py-3.5 text-sm font-semibold shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
             >
-              Explore Intelligence
+              See the Reserve Map
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
+
             <a
               href="#pipeline"
               className="inline-flex items-center gap-2 rounded-sm border border-border px-6 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
