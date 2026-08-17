@@ -3,7 +3,6 @@ import { Navbar } from "@/components/tigertrack/Navbar";
 import { Hero } from "@/components/tigertrack/Hero";
 import { IntelligencePipeline } from "@/components/tigertrack/IntelligencePipeline";
 import { HowItWorks } from "@/components/tigertrack/HowItWorks";
-import { IntelligenceDashboard } from "@/components/tigertrack/IntelligenceDashboard";
 import { WildlifeMap } from "@/components/tigertrack/WildlifeMap";
 import { AlertSection } from "@/components/tigertrack/AlertSection";
 import { FinalCTA } from "@/components/tigertrack/FinalCTA";
@@ -34,7 +33,6 @@ function Index() {
       <Hero />
       <IntelligencePipeline />
       <HowItWorks />
-      <IntelligenceDashboard />
       <WildlifeMap />
       <AlertSection />
       <FinalCTA />
